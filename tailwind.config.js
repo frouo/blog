@@ -1,8 +1,13 @@
 module.exports = {
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       colors: {
+        body: "#0D0D0D",
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
         "accent-7": "#333",
@@ -12,15 +17,7 @@ module.exports = {
       spacing: {
         28: "7rem",
       },
-      letterSpacing: {
-        tighter: "-.04em",
-      },
-      lineHeight: {
-        tight: 1.2,
-      },
       fontSize: {
-        "5xl": "2.5rem",
-        "6xl": "2.75rem",
         "7xl": "4.5rem",
         "8xl": "6.25rem",
       },

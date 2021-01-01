@@ -1,15 +1,6 @@
-@tailwind base;
+@import "tailwindcss/base";
+@import "custom-base.css";
 
-/* Write your own custom base styles here */
+@import "tailwindcss/components";
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
+@import "tailwindcss/utilities";

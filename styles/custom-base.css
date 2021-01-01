@@ -1,0 +1,4 @@
+body {
+  @apply bg-body;
+  @apply text-gray-300;
+}
