@@ -34,10 +34,13 @@ const Post = ({ post, morePosts, preview }: Props) => {
             <article className="mb-32">
               <Head>
                 <title>{post.title}</title>
-                <meta
-                  key="og:image"
-                  property="og:image"
-                  content={post.ogImage.url}
+                <meta name="title" content={post.title} />
+                <meta name="description" content={post.excerpt} />
+                <meta property="og:image" content={post.ogImage.url} />
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charSet="utf-8"
                 />
               </Head>
               <PostHeader
@@ -71,6 +74,7 @@ export async function getStaticProps({ params }: Params) {
     "author",
     "content",
     "ogImage",
+    "excerpt",
     "coverImage",
     "environment",
   ]);

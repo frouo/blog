@@ -1,6 +1,6 @@
 ---
 title: "Does lazy var property capture self?"
-excerpt: "No."
+excerpt: "No. [...]"
 environment: "Swift 5"
 coverImage: "/assets/blog/lazy-var/cover.jpg"
 date: "2021-01-01T00:00:00.000Z"
@@ -29,7 +29,7 @@ In this case a strong reference is created via `self.` in the closure, unless yo
 
 [SO - Lazy initialisation and retain cycle](https://stackoverflow.com/a/38144190/1679768)
 
-> <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/aligatr?ref_src=twsrc%5Etfw">@aligatr</a> When you immediately apply a closure, it&#39;s automatically noescape.</p>&mdash; Joe Groff (@jckarter) <a href="https://twitter.com/jckarter/status/704100315587477504?ref_src=twsrc%5Etfw">February 29, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/aligatr?ref_src=twsrc%5Etfw">@aligatr</a> When you immediately apply a closure, it&#39;s automatically noescape.</p>&mdash; Joe Groff (@jckarter) <a href="https://twitter.com/jckarter/status/704100315587477504?ref_src=twsrc%5Etfw">February 29, 2016</a></blockquote>
 
 [SO - What is difference between @noescape, @escaping and @autoclosure?](https://stackoverflow.com/a/39613221/1679768)
 

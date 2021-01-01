@@ -5,6 +5,11 @@ import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
+import {
+  HOME_DESCRIPTION,
+  HOME_OG_IMAGE_URL,
+  HOME_TITLE,
+} from "../lib/constants";
 
 type Props = {
   allPosts: Post[];
@@ -15,7 +20,10 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>François Rouault | articles, findings, tips and configs</title>
+          <title>{HOME_TITLE}</title>
+          <meta name="title" content={HOME_TITLE} />
+          <meta name="description" content={HOME_DESCRIPTION} />
+          <meta property="og:image" content={HOME_OG_IMAGE_URL} />
         </Head>
         <Container>
           <Intro />
