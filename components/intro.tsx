@@ -3,10 +3,9 @@ import { FunctionComponent } from "react";
 const Intro = () => {
   return (
     <section className="font-mono mt-10 mb-20 md:mb-24 text-center">
-      {/* <p className="text-6xl">Hi</p> */}
-      <p className="text-2xl mt-5">
+      <span className="text-2xl mt-5">
         Hi, I am <h1 className="inline">François Rouault</h1> 🇫🇷
-      </p>
+      </span>
       <h2 className="text-sm text-gray-500 mt-4">
         iOS developer @ France Télévisions,
         <br />
