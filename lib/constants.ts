@@ -1,3 +1,4 @@
+export const WEBSITE_URL = "https://frouo.com";
 export const HOME_TITLE =
   "Dev articles, findings, tips and configs by François Rouault";
 export const HOME_DESCRIPTION =

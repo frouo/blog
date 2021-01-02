@@ -11,6 +11,7 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import "highlight.js/styles/stackoverflow-dark.css";
+import { WEBSITE_URL } from "../../lib/constants";
 
 type Props = {
   post: PostType;
@@ -36,7 +37,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <title>{post.title}</title>
                 <meta name="title" content={post.title} />
                 <meta name="description" content={post.excerpt} />
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta
+                  property="og:image"
+                  content={`${WEBSITE_URL}${post.ogImage.url}`}
+                />
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
