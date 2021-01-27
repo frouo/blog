@@ -23,9 +23,16 @@
 
 .markdown blockquote {
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 32px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   border-left: 4px solid #ccc;
   padding-left: 8px;
+}
+
+.markdown code {
+  font-size: 16px;
+  background: #16f38357;
+  border-radius: 6px;
+  padding: 2px 4px;
 }
