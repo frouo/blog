@@ -61,7 +61,7 @@ const Intro = () => {
         </SocialLink>
       </div> */}
       </div>
-      <div className="mt-8 font-sans">
+      <div className="mt-8 font-sans lg:max-w-2xl lg:text-center lg:mx-auto">
         <p className="mb-0">
           I want my posts to be concise and to the point. Quick to read with
           sample codes rather than thousand words. For more details or to form
