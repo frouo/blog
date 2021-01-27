@@ -24,6 +24,12 @@ const Post = ({ post, morePosts, preview }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  const meta = {
+    title: post.title,
+    description: post.excerpt,
+    imageUrl: `${WEBSITE_URL}${post.ogImage.url}`,
+    url: `${WEBSITE_URL}/posts/${post.slug}`,
+  };
   return (
     <Layout preview={preview}>
       <Container>
@@ -34,13 +40,26 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <>
             <article className="mb-32">
               <Head>
-                <title>{post.title}</title>
-                <meta name="title" content={post.title} />
-                <meta name="description" content={post.excerpt} />
+                {/*<!-- Primary Meta Tags -->*/}
+                <title>{meta.title}</title>
+                <meta name="title" content={meta.title} />
+                <meta name="description" content={meta.description} />
+                {/*<!-- Open Graph / Facebook -->*/}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={meta.url} />
+                <meta property="og:title" content={meta.title} />
+                <meta property="og:description" content={meta.description} />
+                <meta property="og:image" content={meta.imageUrl} />
+                {/*<!-- Twitter -->*/}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={meta.url} />
+                <meta property="twitter:title" content={meta.title} />
                 <meta
-                  property="og:image"
-                  content={`${WEBSITE_URL}${post.ogImage.url}`}
+                  property="twitter:description"
+                  content={meta.description}
                 />
+                <meta property="twitter:image" content={meta.imageUrl} />
+                {/*<!-- End Meta Tags -->*/}
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
