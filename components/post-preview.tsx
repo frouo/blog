@@ -28,12 +28,12 @@ const PostPreview = ({
         {environment && `${environment} | `}
         <DateFormatter dateString={date} />
       </div>
-      <h3 className="text-2xl md:text-3xl mb-0 leading-snug">
+      <h3 className="text-2xl mb-0">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title} →</a>
+          <a>{title} →</a>
         </Link>
       </h3>
-      <p className="text-base md:text-lg leading-relaxed mb-4">{excerpt}</p>
+      <p className="mb-4">{excerpt}</p>
     </div>
   );
 };
