@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {process.env.NODE_ENV !== "development" && <SimpleAnalytics />}
         </body>
       </Html>
     );
@@ -41,6 +42,21 @@ function GoogleAnalytics() {
           `,
         }}
       />
+    </>
+  );
+}
+
+function SimpleAnalytics() {
+  return (
+    <>
+      <script
+        async
+        defer
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
+      ></script>
+      <noscript>
+        <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" />
+      </noscript>
     </>
   );
 }
