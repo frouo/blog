@@ -36,3 +36,19 @@
   border-radius: 6px;
   padding: 2px 4px;
 }
+
+.markdown kbd {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  font-style: "sans";
+  font-size: 11px;
+  line-height: 1.5;
+  color: #242729;
+  text-shadow: 0 1px 0 var(--white);
+  background-color: #e4e6e8;
+  border: 1px solid #9fa6ad;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgb(12 13 14 / 15%), inset 0 1px 0 0 #fff;
+  overflow-wrap: break-word;
+}
