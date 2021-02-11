@@ -31,11 +31,11 @@ Create an empty closure snippet and use <kbd>⌘ cmd</kbd><kbd>⇧ shift</kbd><k
 
 ### How to create this snippet
 
-1. • Type your snippet in Xcode, here `items.map { <#code#> }`
-2. • Select the part of the snippet, here <code><kbd>space</kbd>{ <#code#> }</code>
-3. • Xcode Menu > Editor > Create Code Snippet
-4. • Enter a title
-5. • Click Done
+1. Type your snippet in Xcode, here `items.map { <#code#> }`
+2. Select the part of the snippet, here <code><kbd>space</kbd>{ <#code#> }</code>
+3. Xcode Menu > Editor > Create Code Snippet
+4. Enter a title
+5. Click Done
 
 ![create snippet](/assets/blog/non-breaking-space-warning/create-snippet.gif)
 
@@ -55,8 +55,8 @@ Plus I would probably have to redo the modification with every new Xcode version
 
 ## Also tried with no luck
 
-1. • iTerm2 [stackoverflow answer](https://superuser.com/a/680752) but it's only working in iTerm2 editor
-2. • Modifying `~/Library/KeyBindings/DefaultKeyBinding.dict` [stackoverflow answer](https://superuser.com/a/142573) but I don't want to touch that file indeed...
+1. [iTerm2](https://iterm2.com/) [stackoverflow answer](https://superuser.com/a/680752) but it's only working inside the iTerm2 editor
+2. Modifying `~/Library/KeyBindings/DefaultKeyBinding.dict` [stackoverflow answer](https://superuser.com/a/142573) but I don't want to touch that file indeed...
 
 Now I use the snippet.
 
