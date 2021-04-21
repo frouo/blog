@@ -61,15 +61,15 @@ const Intro = () => {
         </SocialLink>
       </div> */}
       </div>
-      <div className="mt-8 font-sans lg:max-w-2xl lg:text-center lg:mx-auto">
-        <p className="mb-0">
-          I want my posts to be concise and to the point. Quick to read with
-          sample codes rather than thousand words. For more details or to form
-          your opinion, you will find my sources at the bottom of each article.
-        </p>
-        <p className="mt-2">
+      <div className="mt-8 font-sans lg:max-w-2xl lg:text-center lg:mx-auto space-y-2">
+        <p>
           Here are my findings, tips and other configs. It's all about
           development, mostly front-end.
+        </p>
+        <p>
+          I want my posts to be concise, to the point, quick to read, with
+          sample codes rather than thousand words. For more details or to form
+          your opinion, you will find my sources at the bottom of each article.
         </p>
       </div>
     </section>
