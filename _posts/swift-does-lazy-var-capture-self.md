@@ -1,4 +1,5 @@
 ---
+publish: "true"
 title: "Does lazy var capture self?"
 excerpt: "No. Immediately applied closure is automatically considered @noescape."
 environment: "Swift 5"
@@ -44,3 +45,9 @@ In this case a strong reference is created in the closure, see `self.`. Unless y
 [stackoverflow.com - Must all variable or lazy variable initializer in Swift include weak self?](https://stackoverflow.com/a/40794717/1679768)
 
 > This is not to be confused with closure properties that are lazily defined!
+
+## Thank you
+
+Hope it helps. Please drop a ❤️ on my Twitter post to show your support 🙏.
+
+<blockquote data-theme="dark" class="twitter-tweet"><p lang="en" dir="ltr">Do you also ask yourself this question every time you write a lazy var? <a href="https://twitter.com/hashtag/swift?src=hash&amp;ref_src=twsrc%5Etfw">#swift</a> <a href="https://twitter.com/hashtag/developers?src=hash&amp;ref_src=twsrc%5Etfw">#developers</a> <a href="https://t.co/E8dQkXw7Tn">https://t.co/E8dQkXw7Tn</a></p>&mdash; François Rouault ☕️ (@frouo) <a href="https://twitter.com/frouo/status/1354579946077827072?ref_src=twsrc%5Etfw">January 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

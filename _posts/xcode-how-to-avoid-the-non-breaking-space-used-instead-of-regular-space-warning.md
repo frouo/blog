@@ -1,6 +1,7 @@
 ---
+publish: "true"
 title: 'How to avoid the "Non-breaking space used instead of regular expression" warning in Xcode'
-excerpt: ""
+excerpt: "I have this warning everytime I type a closure. In this post I tried various solution. Sorry I found nothing satisfying."
 environment: "Xcode 12.3"
 coverImage: "/assets/blog/non-breaking-space-warning/cover.png"
 date: "2021-02-03T00:00:00.000Z"
@@ -61,3 +62,9 @@ Plus I would probably have to redo the modification with every new Xcode version
 Now I use the snippet.
 
 Please reach me if you find a better solution 👋
+
+## Thank you
+
+Hope it helps. Please drop a ❤️ on my Twitter post to show your support 🙏.
+
+<blockquote data-theme="dark" class="twitter-tweet"><p lang="en" dir="ltr">Am I the only one having this warning all the time?<br><br>My solution has been to create a snippet ` { &lt;#code#&gt; }` so I no more have to write empty closure.<br><br>Please comment below if you face the same and found a better solution 🙏🏻🙂<a href="https://twitter.com/hashtag/Xcode?src=hash&amp;ref_src=twsrc%5Etfw">#Xcode</a> <a href="https://twitter.com/hashtag/iOSDev?src=hash&amp;ref_src=twsrc%5Etfw">#iOSDev</a> <a href="https://twitter.com/hashtag/azerty?src=hash&amp;ref_src=twsrc%5Etfw">#azerty</a><a href="https://t.co/9DEFMVKZrE">https://t.co/9DEFMVKZrE</a></p>&mdash; François Rouault ☕️ (@frouo) <a href="https://twitter.com/frouo/status/1357260105956392960?ref_src=twsrc%5Etfw">February 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

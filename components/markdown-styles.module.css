@@ -64,3 +64,7 @@
   box-shadow: 0 1px 1px rgb(12 13 14 / 15%), inset 0 1px 0 0 #fff;
   overflow-wrap: break-word;
 }
+
+.markdown img + em {
+  font-size: small;
+}
