@@ -12,6 +12,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import "highlight.js/styles/stackoverflow-dark.css";
 import { WEBSITE_URL } from "../../lib/constants";
+import path from "path";
 
 type Props = {
   post: PostType;
@@ -101,7 +102,10 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
     "environment",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(
+    post.content || "",
+    post.coverImage.replace(path.basename(post.coverImage), "")
+  );
 
   return {
     props: {

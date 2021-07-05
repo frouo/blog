@@ -68,3 +68,7 @@
 .markdown img + em {
   font-size: small;
 }
+
+.markdown img[title~="\`mermaid\`"] {
+  margin: auto;
+}
