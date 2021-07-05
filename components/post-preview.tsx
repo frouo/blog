@@ -30,7 +30,7 @@ const PostPreview = ({
       </div>
       <h3 className="text-2xl">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a>{title} →</a>
+          <a>{title}&nbsp;→</a>
         </Link>
       </h3>
       <p className="mb-4 mt-3">{excerpt}</p>

@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 
 const Intro = () => {
   return (
-    <section className="mt-10 mb-16 md:mb-20 text-sm">
+    <section className="mt-10 mb-12 text-sm">
       <div className="text-center">
         <span className="font-mono text-2xl mt-5">
           Hi, I am <h1 className="inline">François Rouault</h1>
@@ -58,7 +58,7 @@ const Intro = () => {
             <SocialLink href="https://github.com/frouo/promise-lite">
               PromiseLite
             </SocialLink>
-            , a Swift library to simplify asynchronous programming.
+            , a Swift library that simplifies asynchronous programming.
             <br />
             <SocialLink href="https://chromecopilot.com">
               Chrome Copilot
