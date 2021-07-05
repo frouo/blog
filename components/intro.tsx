@@ -40,14 +40,14 @@ const Intro = () => {
             👔
           </a>
         </span>
-        <h2 className="text-sm text-gray-500 mt-4">
+        <h2 className="text-sm text-gray-400 mt-4">
           iOS developer @ France Télévisions,
           <br />
           Next.js fan, ex Android dev.
         </h2>
         <div className="mt-10">
           <p className="font-mono text-2xl">Projects</p>
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-400 mt-4">
             <SocialLink href="https://lembot.com">Lembot</SocialLink>, a
             micro-SaaS that automates export of Lemlist raw data into Google
             Sheets.
@@ -70,7 +70,7 @@ const Intro = () => {
       </div>
       <div className="mt-10 text-center max-w-2xl mx-auto">
         <p className="font-mono text-2xl">Blog</p>
-        <p className="text-gray-500 mt-4">
+        <p className="text-gray-400 mt-4">
           It's all about development, mostly front-end. I want my blog posts to
           be concise, quick to read, with sample codes rather than thousand
           words. For more details or to form your opinion, you will find my

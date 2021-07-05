@@ -1,4 +1,5 @@
 import Container from "./container";
+// @ts-ignore
 import cn from "classnames";
 
 type Props = {

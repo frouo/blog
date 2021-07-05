@@ -2,7 +2,7 @@
 publish: "true"
 title: "How to let your users try before they buy"
 excerpt: "In this post I describe how to set up a subscription with a 14-day trial period, no credit card required to sign up. With Stripe as payment platform."
-environment: "fullstack"
+environment: "Fullstack"
 coverImage: "/assets/blog/no-cc-14-day-trial/cover.jpg"
 date: "2021-06-21T00:00:00.000Z"
 author:
