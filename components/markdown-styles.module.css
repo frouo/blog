@@ -72,3 +72,32 @@
 .markdown img[title~="\`mermaid\`"] {
   margin: auto;
 }
+
+.markdown table,
+.markdown th,
+.markdown td {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.markdown table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border: hidden;
+}
+
+.markdown th,
+.markdown td {
+  padding: 10px;
+  text-align: left;
+}
+
+.markdown tr:nth-child(even) {
+  background: transparent;
+}
+
+.markdown tr:nth-child(odd) {
+  background: #0f0f0f;
+}
