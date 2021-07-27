@@ -12,6 +12,8 @@ ogImage:
   url: "/assets/blog/lazy-var/cover.jpg"
 ---
 
+![lazy var](/assets/blog/lazy-var/cover.jpg)
+
 No.
 
 By default, immediately applied closure `{}` is considered `@noescape` by the compiler. Meaning that it doesn't capture self.
