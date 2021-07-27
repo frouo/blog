@@ -102,4 +102,6 @@ _Disclamer: I am not saying that it's a bug. I now realize it is well designed. 
 
 ## Thank you
 
-Hope it helps.
+Hope it helps. Please drop a ❤️ on my Twitter post to show your support 🙏.
+
+<blockquote data-theme="dark" class="twitter-tweet"><p lang="en" dir="ltr">🗒 Let your users try before they buy<br><br>A blog post on how to implement a subscription with 14-day trial, no credit card required to sign up. With <a href="https://twitter.com/stripe?ref_src=twsrc%5Etfw">@stripe</a> as payment platform.<a href="https://twitter.com/hashtag/dev?src=hash&amp;ref_src=twsrc%5Etfw">#dev</a><a href="https://t.co/4zt2MvQXmA">https://t.co/4zt2MvQXmA</a></p>&mdash; François Rouault ☕️ (@frouo) <a href="https://twitter.com/frouo/status/1412161247030689796?ref_src=twsrc%5Etfw">July 5, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
