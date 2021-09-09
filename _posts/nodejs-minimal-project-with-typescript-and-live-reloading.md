@@ -1,0 +1,20 @@
+---
+publish: "true"
+title: "Minimal nodejs project with typescript"
+excerpt: "A Github repository with a minimal nodejs server : Express, Typescript, Live Reloading, Environment Variables."
+environment: "Nodejs"
+coverImage: "/assets/blog/nodejs-with-typescript/cover.jpg"
+date: "2021-09-09T00:00:00.000Z"
+author:
+  name: François Rouault
+  picture: "/assets/blog/authors/jj.jpeg"
+ogImage:
+  url: "/assets/blog/nodejs-with-typescript/cover.jpg"
+---
+
+<div class="text-center">
+    👇
+    <br/>
+    <br/>
+    <a href="https://github.com/frouo/expressjs-typescript-helloworld">https://github.com/frouo/expressjs-typescript-helloworld</a>
+<div>
