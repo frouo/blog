@@ -21,15 +21,11 @@ ogImage:
 
 ### `layoutIfNeeded`
 
-The method is a synchronous call that tells the system you want a layout and redraw of a view and its subviews. And you want it done <u>immediately</u> without waiting for the update cycle. When the call to this method is complete, the layout has already been adjusted and drawn based on any changes that were noted prior to the method call.
-
-[ doc ↗](https://developer.apple.com/documentation/uikit/uiview/1622507-layoutifneeded)
+The method is a synchronous call that tells the system you want a layout and redraw of a view and its subviews. And you want it done <u>immediately</u> without waiting for the update cycle. When the call to this method is complete, the layout has already been adjusted and drawn based on any changes that were noted prior to the method call. [ doc ↗](https://developer.apple.com/documentation/uikit/uiview/1622507-layoutifneeded)
 
 ### `setNeedsLayout`
 
-The method tells the system that you want it to layout and redraw that view, and all of its subviews, during the update views cycle. This is an asynchronous activity, because the method completes and returns immediately. It's only later (milliseconds) that the layout and redrawing actually happens. You just don’t know when exactly.
-
-[ doc ↗](https://developer.apple.com/documentation/uikit/uiview/1622601-setneedslayout)
+The method tells the system that you want it to layout and redraw that view, and all of its subviews, during the update views cycle. This is an asynchronous activity, because the method completes and returns immediately. It's only later (milliseconds) that the layout and redrawing actually happens. You just don’t know when exactly. [ doc ↗](https://developer.apple.com/documentation/uikit/uiview/1622601-setneedslayout)
 
 ## Names can be deceiving
 
@@ -45,4 +41,6 @@ The link in case it reappears one day: [iosinsight.com ↗](http://www.iosinsigh
 
 ## Thank you
 
-Hope it helps.
+Hope it helps. Drop a ❤️ if you found it helpful, thanks 🙂
+
+<blockquote data-theme="dark" class="twitter-tweet"><p lang="en" dir="ltr">Who is who. A quick note to remind the difference between layoutIfNeeded and setNeedsLayout.<a href="https://t.co/9fgBqun62Y">https://t.co/9fgBqun62Y</a></p>&mdash; François Rouault ☕️ (@frouo) <a href="https://twitter.com/frouo/status/1445714021907267584?ref_src=twsrc%5Etfw">October 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
