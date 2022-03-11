@@ -49,8 +49,7 @@ const Intro = () => {
           <p className="font-mono text-2xl">Projects</p>
           <p className="text-gray-400 mt-4">
             <SocialLink href="https://lembot.com">Lembot</SocialLink>, a
-            micro-SaaS that automates export of Lemlist raw data into Google
-            Sheets.
+            micro-SaaS that automatically exports your Lemlist campaign results to your Google Sheets
             <br />
             <SocialLink href="https://resizer.dev">Resizer.dev</SocialLink>, a
             webapp to visualize and share responsive design.
@@ -60,11 +59,15 @@ const Intro = () => {
             </SocialLink>
             , a Swift library that simplifies asynchronous programming.
             <br />
-            <SocialLink href="https://chromecopilot.com">
-              Chrome Copilot
+            <SocialLink href="https://www.raycast.com/frouo/google-chrome-profiles">
+              Google Chrome Profile
             </SocialLink>
-            , a macOS app to create and launch isolated workspaces in Chrome
-            browser.
+            , a <a href="https://raycast.com/">Raycast</a> extension that lists your Chrome Profiles and bookmarks so it's super easy to open and navigate between them.
+            <br />
+            <SocialLink href="https://github.com/frouo/next-markdown">
+            next-markdown
+            </SocialLink>
+            , a nextjs library to generate pages from markdown files with 0 effort and dynamic routes.
           </p>
         </div>
       </div>
