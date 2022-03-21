@@ -41,7 +41,7 @@ const Intro = () => {
           </a>
         </span>
         <h2 className="text-sm text-gray-400 mt-4">
-          iOS developer @ France Télévisions,
+          iOS developer
           <br />
           Next.js fan, ex Android dev.
         </h2>
@@ -49,20 +49,20 @@ const Intro = () => {
           <p className="font-mono text-2xl">Projects</p>
           <p className="text-gray-400 mt-4">
             <SocialLink href="https://lembot.com">Lembot</SocialLink>, a
-            micro-SaaS that automatically exports your Lemlist campaign results to your Google Sheets
+            micro-SaaS that automatically exports your Lemlist campaign results to Google Sheets
             <br />
             <SocialLink href="https://resizer.dev">Resizer.dev</SocialLink>, a
-            webapp to visualize and share responsive design.
+            webapp to visualize websites responsive design and share it.
             <br />
             <SocialLink href="https://github.com/frouo/promise-lite">
               PromiseLite
             </SocialLink>
-            , a Swift library that simplifies asynchronous programming.
+            , a Swift library that simplifies iOS asynchronous programming (= JavaScript Promise).
             <br />
             <SocialLink href="https://www.raycast.com/frouo/google-chrome-profiles">
               Google Chrome Profile
             </SocialLink>
-            , a <a href="https://raycast.com/">Raycast</a> extension that lists your Chrome Profiles and bookmarks so it's super easy to open and navigate between them.
+            , a <a href="https://raycast.com/">Raycast</a> extension that makes it super easy & fast to launch and navigate thought your Chrome Profiles and Bookmarks.
             <br />
             <SocialLink href="https://github.com/frouo/next-markdown">
             next-markdown
@@ -74,10 +74,10 @@ const Intro = () => {
       <div className="mt-10 text-center max-w-2xl mx-auto">
         <p className="font-mono text-2xl">Blog</p>
         <p className="text-gray-400 mt-4">
-          It's all about development, mostly front-end. I want my blog posts to
+          It's all about development. I want my blog posts to
           be concise, quick to read, with sample codes rather than thousand
-          words. For more details or to form your opinion, you will find my
-          sources at the bottom of each article.
+          words. For more details or to form your opinion, you will find
+          references at the bottom of each article.
         </p>
       </div>
     </section>
