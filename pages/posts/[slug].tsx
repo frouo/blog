@@ -28,8 +28,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
   const meta = {
     title: post.title,
     description: post.excerpt,
-    imageUrl: `${WEBSITE_URL}${post.ogImage.url}`,
-    url: `${WEBSITE_URL}/posts/${post.slug}`,
+    imageUrl: post.ogImage.url.startsWith("http")
+      ? post.ogImage.url
+      : `${WEBSITE_URL}${post.ogImage.url}`,
+    url: `${WEBSITE_URL}${router.asPath}`,
   };
   return (
     <Layout preview={preview}>
@@ -69,7 +71,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
               </Head>
               <PostHeader
                 title={post.title}
-                coverImage={post.coverImage}
                 date={post.date}
                 environment={post.environment}
               />

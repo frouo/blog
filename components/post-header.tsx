@@ -3,12 +3,11 @@ import PostTitle from "./post-title";
 
 type Props = {
   title: string;
-  coverImage: string;
   date: string;
   environment: string;
 };
 
-const PostHeader = ({ title, coverImage, date, environment }: Props) => {
+const PostHeader = ({ title, date, environment }: Props) => {
   return (
     <>
       <div className="mb-12">
