@@ -13,6 +13,7 @@ import PostType from "../../types/post";
 import "highlight.js/styles/stackoverflow-dark.css";
 import { WEBSITE_URL } from "../../lib/constants";
 import path from "path";
+import Script from "next/script";
 
 type Props = {
   post: PostType;
@@ -63,7 +64,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 />
                 <meta property="twitter:image" content={meta.imageUrl} />
                 {/*<!-- End Meta Tags -->*/}
-                <script
+                <Script
                   async
                   src="https://platform.twitter.com/widgets.js"
                   charSet="utf-8"

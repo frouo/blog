@@ -2,7 +2,7 @@
 import html from "remark-html";
 // @ts-ignore
 import highlight from "remark-highlight.js";
-import unified from "unified";
+import { unified } from "unified";
 import markdownParse from "remark-parse";
 import externalLinks from "remark-external-links";
 // @ts-ignore
@@ -17,12 +17,14 @@ export default async function markdownToHtml(
     .use(mermaid, { simple: false, imageDir: assetPath })
     .use(externalLinks, { target: "_blank" })
     .use(markdownParse)
-    .use(highlight, { exclude: "mermaid" })
+    // .use(highlight, { exclude: ["mermaid"] })
     .use(html)
     .process({
       contents: markdown,
       data: { destinationDir: path.join(process.cwd(), "public") },
     });
 
-  return result.toString();
+  const res = result.toString();
+  console.log("RESULT: ", res);
+  return res;
 }
