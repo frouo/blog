@@ -2,11 +2,12 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "_posts");
+const postsDirectory = join(process.cwd(), "markdown/posts");
 
 export function getPostSlugs() {
   return fs
     .readdirSync(postsDirectory)
+    .filter((e) => e.endsWith(".md"))
     .map((file) => encodeURIComponent(file.replace(/\.md$/, "")));
 }
 
@@ -42,7 +43,7 @@ export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
-    .filter((value)=>value["publish"] === "true")
+    .filter((value) => value["publish"] === "true")
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1)); // sort posts by date in descending order
   return posts;
 }

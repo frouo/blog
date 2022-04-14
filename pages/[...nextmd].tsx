@@ -1,31 +1,31 @@
+import NextMarkdown from "next-markdown";
 import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
-import { getPostBySlug, getPostSlugs } from "../../lib/api";
-import PostTitle from "../../components/post-title";
+import Container from "../components/container";
+import PostBody from "../components/post-body";
+import Header from "../components/header";
+import PostHeader from "../components/post-header";
+import Layout from "../components/layout";
+import PostTitle from "../components/post-title";
 import Head from "next/head";
-import markdownToHtml from "../../lib/markdownToHtml";
-import PostType from "../../types/post";
+import { MDXRemote } from "next-mdx-remote";
 import "highlight.js/styles/stackoverflow-dark.css";
-import { WEBSITE_URL } from "../../lib/constants";
-import path from "path";
+import { WEBSITE_URL } from "../lib/constants";
 import Script from "next/script";
+import remarkPrism from "remark-prism";
+import "prismjs/themes/prism-tomorrow.css";
 
-type Props = {
-  post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
-};
+export const nextmd = NextMarkdown({
+  pathToContent: "./markdown",
+  remarkPlugins: [remarkPrism],
+});
 
-const Post = ({ post, morePosts, preview }: Props) => {
+export const getStaticPaths = nextmd.getStaticPaths;
+export const getStaticProps = nextmd.getStaticProps;
+
+export default function MarkdownPage({ frontMatter, html, mdxSource }) {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
+  const post = frontMatter;
+
   const meta = {
     title: post.title,
     description: post.excerpt,
@@ -34,8 +34,9 @@ const Post = ({ post, morePosts, preview }: Props) => {
       : `${WEBSITE_URL}${post.ogImage.url}`,
     url: `${WEBSITE_URL}${router.asPath}`,
   };
+
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -75,61 +76,12 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 date={post.date}
                 environment={post.environment}
               />
-              <PostBody content={post.content} />
+              {html && <PostBody content={html} />}
+              {mdxSource && <MDXRemote {...mdxSource} />}
             </article>
           </>
         )}
       </Container>
     </Layout>
   );
-};
-
-export default Post;
-
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "author",
-    "content",
-    "ogImage",
-    "excerpt",
-    "coverImage",
-    "environment",
-  ]);
-  const content = await markdownToHtml(
-    post.content || "",
-    post.coverImage.replace(path.basename(post.coverImage), "")
-  );
-
-  return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const slugs = getPostSlugs();
-
-  return {
-    paths: slugs.map((slug) => {
-      return {
-        params: {
-          slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
 }
