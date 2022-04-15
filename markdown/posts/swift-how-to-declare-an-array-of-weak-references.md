@@ -40,7 +40,7 @@ Don't be afraid with `() -> Foo?`. Tell yourself that it is just a type! It is. 
 
 Do not hesitate to create a typealias if it comes more readable for you
 
-```
+```swift
 typealias WeakArray<T> = [() -> T?]
 ```
 
