@@ -2,9 +2,7 @@
 import html from "remark-html";
 // @ts-ignore
 import highlight from "remark-highlight.js";
-import { unified } from "unified";
-import markdownParse from "remark-parse";
-import externalLinks from "remark-external-links";
+import unified from "unified";
 // @ts-ignore
 import mermaid from "remark-mermaid";
 import path from "path";
@@ -15,8 +13,8 @@ export default async function markdownToHtml(
 ) {
   const result = await unified()
     .use(mermaid, { simple: false, imageDir: assetPath })
-    .use(externalLinks, { target: "_blank" })
-    .use(markdownParse)
+    .use(require("remark-external-links"), { target: "_blank" })
+    .use(require("remark-parse"))
     // .use(highlight, { exclude: ["mermaid"] })
     .use(html)
     .process({

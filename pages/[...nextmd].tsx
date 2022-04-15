@@ -11,20 +11,25 @@ import { MDXRemote } from "next-mdx-remote";
 import "highlight.js/styles/stackoverflow-dark.css";
 import { WEBSITE_URL } from "../lib/constants";
 import Script from "next/script";
-import remarkPrism from "remark-prism";
 import "prismjs/themes/prism-tomorrow.css";
+import { InferGetStaticPropsType } from "next";
 
-export const nextmd = NextMarkdown({
+const nextmd = NextMarkdown({
   pathToContent: "./markdown",
-  remarkPlugins: [remarkPrism],
+  remarkPlugins: [require("remark-prism")],
 });
 
 export const getStaticPaths = nextmd.getStaticPaths;
 export const getStaticProps = nextmd.getStaticProps;
 
-export default function MarkdownPage({ frontMatter, html, mdxSource }) {
+export default function MarkdownPage(
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) {
   const router = useRouter();
-  const post = frontMatter;
+
+  const post = props.frontMatter;
+  const html = props.html;
+  const mdxSource = props.mdxSource;
 
   const meta = {
     title: post.title,
