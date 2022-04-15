@@ -12,29 +12,19 @@ ogImage:
   url: "/assets/blog/next-markdown/cover.jpg"
 ---
 
-This is not an n-th tutorial on how to use `remark-html` to render markdown in your nextjs project.
+This is not an n-th tutorial on how to use `remark-html` to render markdown in your nextjs project. Nextjs provide a good [example ↗](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) that covers this.
 
-There are plenty very good how-to on the web, just Google "nextjs markdown".
+Instead I would like to present you `next-markdown`
 
-In a nutshell, here are the steps:
+`next-markdown` is a npm package that wraps all the complexity of reading your local markdown files, converting them into markdown, create paths in getStaticPaths and getStaticProps.
 
-- use `fs` to read and list your markdown files
-- slugify the markdown file name
-- implement `getStaticPaths` to tell nextjs the paths for your markdown files
-- install [remark / rehype ↗](https://github.com/remarkjs/remark-html) to convert markdown to HTML
-- implement `getStaticProps` to design your layout
+If you want to start fast with markdown in your nextjs project, without all the hassle, continue the reading 👇
 
-To be honest it's a lot of boilerplate code.
+_disclaimer: I am the author of this package_ =)
 
-I recommand at least you check the [blog example code ↗](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) provided by the nextjs for the curiosity.
+## Get Started with next-markdown
 
-## Or,
-
-If you want to start fast with markdown in your nextjs project, without all the hassle, may I suggest you take a look at `next-markdown` 🤩 _(disclaimer: I am the author of this package)_
-
-## Use next-markdown
-
-I am pleased to introduce a package called `next-markdown` that brings markdown support in your nextjs project - **in seconds**. Really.
+It only takes few seconds to get ready with `next-markdown`:
 
 ### Step 1
 
@@ -75,7 +65,7 @@ This is **awesome**
 
 Run your nextjs project and see the magic in http://localhost:3000/hello.
 
-### Dynamic route based on the file path
+## The best part of it
 
 `next-markdown` automatically parse your markdown folder and create paths accordingly, eg:
 
@@ -85,7 +75,7 @@ Run your nextjs project and see the magic in http://localhost:3000/hello.
 
 In other words `next-markdown` mimics the way nextjs works with `pages/` (aka dynamic routes).
 
-### Features and Examples
+## Features and Examples
 
 All the features are listed in the [next-markdown github repo ↗](https://github.com/frouo/next-markdown#features-)
 
