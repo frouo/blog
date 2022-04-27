@@ -44,33 +44,7 @@ If `trialEndAt` date is in the future, then grant User access to your website. E
 
 Here is the state diagram:
 
-```mermaid
-%%{init: {'theme':'dark'}}%%
-stateDiagram-v2
-    S1 : Stripe Subscription API
-    A : ✅ Access Granted
-    AT : ✅ Access Granted (Trial)
-    SBP : Stripe Customer Portal
-    CT : Check <code>trialEndAt</code>
-    SCL : Stripe Checkout
-    D : ❌ End Of Trial
-
-    [*] --> S1
-    state if_state <<choice>>
-    S1 --> if_state
-    if_state --> A : subcription
-    if_state --> CT : no subscription
-
-    A --> SBP
-
-    state if_state_trial <<choice>>
-    CT --> if_state_trial
-    if_state_trial --> AT : now <= trialEndAt
-    if_state_trial --> D : trialEndAt < now
-
-    AT --> SCL
-    D --> SCL
-```
+[![](https://mermaid.ink/img/pako:eNp1kt9KwzAUxl_lEBhV2RC9LLXQdUMEwUJ3Z2VkaebC1mQkqSKll975CPpyPon5064baq-SnN855ztfT4OIKCkK0WjUMM50CE2gN7SiQRiUWG6Dth2NCq401nTG8LPE1eTluuBgvvwKQsi1ZHsKeb1SxJw0ExyS7M4TiQG-P98hIYQqBbcSc03LLrb4MwhnC8nw7rxrMc2GHmmttKiohExIjXeeSG2ZdEPJFiI7Sqxt-pyXiY4u3UNXKb0_qmR5UWsfmlkhXx9gkuBhDa5_wX3s8eIJJpPYzOrvzghg66U_RBHZCEZoHB8ssXQf948H2oasJape9V79QbiJuLCUGrDeUCdmmvUPp3qWbvhfqkzFY1WeOu3cZTqFvv8rRDcwmPkvbt0bMIhs6kGub2y8753urmiMzI-sMCvN6jU2WCC3dgUKzdFuXoEK3hqu3pem4bxkWkgUrvFO0THCtRb5Gyco1LKmPdQtaEe1Pyk06O8)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNp1kt9KwzAUxl_lEBhV2RC9LLXQdUMEwUJ3Z2VkaebC1mQkqSKll975CPpyPon5064baq-SnN855ztfT4OIKCkK0WjUMM50CE2gN7SiQRiUWG6Dth2NCq401nTG8LPE1eTluuBgvvwKQsi1ZHsKeb1SxJw0ExyS7M4TiQG-P98hIYQqBbcSc03LLrb4MwhnC8nw7rxrMc2GHmmttKiohExIjXeeSG2ZdEPJFiI7Sqxt-pyXiY4u3UNXKb0_qmR5UWsfmlkhXx9gkuBhDa5_wX3s8eIJJpPYzOrvzghg66U_RBHZCEZoHB8ssXQf948H2oasJape9V79QbiJuLCUGrDeUCdmmvUPp3qWbvhfqkzFY1WeOu3cZTqFvv8rRDcwmPkvbt0bMIhs6kGub2y8753urmiMzI-sMCvN6jU2WCC3dgUKzdFuXoEK3hqu3pem4bxkWkgUrvFO0THCtRb5Gyco1LKmPdQtaEe1Pyk06O8)
 
 ## A quick word about the Stripe Subscription API
 
