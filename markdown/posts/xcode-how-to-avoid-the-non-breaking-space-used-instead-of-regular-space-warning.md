@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: 'How to avoid the "Non-breaking space used instead of regular expression" warning in Xcode'
 excerpt: "I have this warning everytime I type a closure. In this post I tried various solution. Sorry I found nothing satisfying."
 environment: "Xcode 12.3"
 coverImage: "/assets/blog/non-breaking-space-warning/cover.png"
-date: "2021-02-03T00:00:00.000Z"
+date: "2021-02-03"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

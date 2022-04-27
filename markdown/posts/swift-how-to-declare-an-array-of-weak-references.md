@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "How to declare an array of weak references in Swift"
 excerpt: "It can be achieved in one line of code. No need to create extra classes or structs."
 environment: "Swift 5"
 coverImage: "/assets/blog/array-of-weak-references/cover.jpg"
-date: "2021-04-21T00:00:00.000Z"
+date: "2021-04-21"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

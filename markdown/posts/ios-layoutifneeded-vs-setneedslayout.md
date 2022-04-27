@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "layoutIfNeeded vs setNeedsLayout"
 excerpt: 'Stated succinctly, layoutIfNeeded says "update immediately please", whereas setNeedsLayout says "update in the next UI update cycle".'
 environment: "iOS"
 coverImage: "/assets/blog/ios-layoutifneeded-vs-setneedslayout/cover.jpg"
-date: "2021-10-06T00:00:00.000Z"
+date: "2021-10-06"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

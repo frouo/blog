@@ -1,6 +1,7 @@
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
+import { WEBSITE_URL } from "../lib/constants";
 
 type Props = {
   title: string;
@@ -29,7 +30,7 @@ const PostPreview = ({
         <DateFormatter dateString={date} />
       </div>
       <h3 className="text-2xl">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link href={`${WEBSITE_URL}/${slug}`}>
           <a>{title}&nbsp;→</a>
         </Link>
       </h3>

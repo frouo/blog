@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "Adding markdown in your nextjs project - in seconds"
 excerpt: "Introducing `next-markdown` allowing you to start fast with markdown files in your nextjs project, without all the hassle."
 environment: "Nextjs"
 coverImage: "/assets/blog/next-markdown/cover.jpg"
-date: "2022-04-07T00:00:00.000Z"
+date: "2022-04-07"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

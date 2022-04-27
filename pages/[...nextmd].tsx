@@ -1,4 +1,4 @@
-import NextMarkdown from "next-markdown";
+import { NextMarkdownProps } from "next-markdown";
 import { useRouter } from "next/router";
 import Container from "../components/container";
 import PostBody from "../components/post-body";
@@ -12,19 +12,13 @@ import "highlight.js/styles/stackoverflow-dark.css";
 import { WEBSITE_URL } from "../lib/constants";
 import Script from "next/script";
 import "prismjs/themes/prism-tomorrow.css";
-import { InferGetStaticPropsType } from "next";
-
-const nextmd = NextMarkdown({
-  pathToContent: "./markdown",
-  remarkPlugins: [require("remark-prism")],
-});
+import { FrontMatter } from "../lib/types";
+import nextmd from "../lib/nextmd";
 
 export const getStaticPaths = nextmd.getStaticPaths;
 export const getStaticProps = nextmd.getStaticProps;
 
-export default function MarkdownPage(
-  props: InferGetStaticPropsType<typeof getStaticProps>
-) {
+export default function MarkdownPage(props: NextMarkdownProps<FrontMatter>) {
   const router = useRouter();
 
   const post = props.frontMatter;

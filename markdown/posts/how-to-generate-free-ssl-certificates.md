@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "How to generate SSL certificate"
 excerpt: "Secure your website with SSL certificate. In this post, let's generate SSL Certificate with Lets Encrypt."
 environment: "Server"
 coverImage: "/assets/blog/certbot/cover.jpg"
-date: "2021-09-21T00:00:00.000Z"
+date: "2021-09-21"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

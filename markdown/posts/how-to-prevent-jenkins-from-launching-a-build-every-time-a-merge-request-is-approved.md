@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "How to prevent Jenkins from launching a build every time a MR is approved"
 excerpt: "Let's be green 🌳, for free. In this post I show you how to avoid an unnecessary launch of your CI."
 environment: "CI"
 coverImage: "/assets/blog/jenkins-mr-approved/cover-jenkins-config.jpg"
-date: "2021-02-11T00:00:00.000Z"
+date: "2021-02-11"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"

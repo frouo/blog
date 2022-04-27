@@ -2,15 +2,16 @@ import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
-import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import Post from "../types/post";
 import {
   HOME_DESCRIPTION,
   HOME_OG_IMAGE_URL,
   HOME_TITLE,
   WEBSITE_URL,
 } from "../lib/constants";
+import { NextMarkdownProps } from "next-markdown";
+import { FrontMatter } from "../lib/types";
+import nextmd from "../lib/nextmd";
 
 const meta = {
   title: HOME_TITLE,
@@ -19,11 +20,11 @@ const meta = {
   url: WEBSITE_URL,
 };
 
-type Props = {
-  allPosts: Post[];
+export const getStaticProps = async () => {
+  return nextmd.getStaticPropsForNextmd(["posts"]);
 };
 
-const Index = ({ allPosts }: Props) => {
+export default function Index(props: NextMarkdownProps<never, FrontMatter>) {
   return (
     <>
       <Layout>
@@ -48,27 +49,15 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
+          {props.subPaths && (
+            <MoreStories
+              posts={props.subPaths.sort((a, b) =>
+                b.frontMatter.date.localeCompare(a.frontMatter.date)
+              )}
+            />
+          )}
         </Container>
       </Layout>
     </>
   );
-};
-
-export default Index;
-
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "publish",
-    "title",
-    "date",
-    "slug",
-    "environment",
-    "coverImage",
-    "excerpt",
-  ]);
-
-  return {
-    props: { allPosts },
-  };
-};
+}

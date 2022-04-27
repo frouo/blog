@@ -1,10 +1,9 @@
 ---
-publish: "true"
 title: "Does lazy var capture self?"
 excerpt: "No. Immediately applied closure is automatically considered @noescape."
 environment: "Swift 5"
 coverImage: "/assets/blog/lazy-var/cover.jpg"
-date: "2021-01-01T00:00:00.000Z"
+date: "2021-01-01"
 author:
   name: François Rouault
   picture: "/assets/blog/authors/jj.jpeg"
