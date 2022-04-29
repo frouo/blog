@@ -1,3 +1,4 @@
+import { InferGetStaticPropsType } from "next";
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import Intro from "../components/intro";
@@ -9,7 +10,6 @@ import {
   HOME_TITLE,
   WEBSITE_URL,
 } from "../lib/constants";
-import { NextMarkdownProps } from "next-markdown";
 import { FrontMatter } from "../lib/types";
 import nextmd from "../lib/nextmd";
 
@@ -21,10 +21,12 @@ const meta = {
 };
 
 export const getStaticProps = async () => {
-  return nextmd.getStaticPropsForNextmd(["posts"]);
+  return nextmd.getStaticPropsForNextmd<FrontMatter>(["posts"]);
 };
 
-export default function Index(props: NextMarkdownProps<never, FrontMatter>) {
+export default function Index(
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) {
   return (
     <>
       <Layout>
