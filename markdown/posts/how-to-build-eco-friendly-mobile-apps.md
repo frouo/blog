@@ -95,13 +95,20 @@ Basically, the less energy your app needs, the less impact it has on the Environ
 
 Focus on your app's power consumption: CPU, GPU, GPS, sounds, network, everything needs power. The less, the better.
 
-I think there are plenty more ideas on how to make your app eco-friendly. Please share your tips.
+Thank you for your time, hope this help ❤️
 
-Thank you for time, hope this help ❤️
+## Share your advice
+
+I am sure there are plenty more ideas on how to make your app eco-friendly.
+
+👉 Please share your tips [here ↗️](https://twitter.com/frouo/status/1542814776723705857)
+
+Thanks
 
 ## References
 
 - [developpement mobile durable - Gabriel Adgeg (🇫🇷) ↗️](https://speakerdeck.com/gabrieladgeg/developpement-mobile-durable)
+- [NOWU | Your planet. Your media. ↗️](https://www.nowuproject.eu/)
 - [how to prevent Jenkins from launching a build every time a merge request is approved ↗️](https://frouo.com/posts/how-to-prevent-jenkins-from-launching-a-build-every-time-a-merge-request-is-approved)
 
 #### iOS
